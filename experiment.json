@@ -1,0 +1,10 @@
+{
+  "task_name": "Test",
+  "command" : "run.py",
+  "param": {
+    "var1" : 20,
+    "var2" : [1, 2],
+    "var3" : {"linspace": [1, 2, 3]},
+    "var4" : {"arange" : [2, 3, 0.5]}
+  }
+}
