@@ -1,0 +1,19 @@
+{
+	"PBS": {
+		"Program_Name": "DMC_Spin",
+		"Work_Dir": "/storage/home/tuz38/work/TZ_Lib/Torus_Spin/Finite/W50/",
+		"Storage_Dir": "/storage/home/tuz38/work/TZ_Lib/Torus_Spin/Finite/W50/Storage/",
+		"Queue_Name": "open",
+		"Wall_Time": "48:00:00",
+		"Job_Name": "Spin_Width50A"
+		
+	},
+	"Monte_Carlo":	{
+		"System_Type": ["CFFS12"],
+		"Filling_Factor": [0.5],
+		"Ne": [25],
+		"LL_Mixing":[0.5, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+		"QW_Width": [50],
+		"Random_Seed": [1,2,3]
+	}
+}
