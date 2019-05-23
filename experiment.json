@@ -6,10 +6,10 @@
   "post_task" : "",
   "assignment_per_worker": 1,
   "work_dir":"/storage/home/juz153/work/ParallelDeploy",
+  "job_limit" : 100,
   "pbs": {
     "queue_name": "open",
     "wall_time": "48:00:00",
-    "job_limit" : 100,
   },
   "param": {
     "var1" : 20,

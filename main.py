@@ -40,6 +40,13 @@ def generate_param_space(vars):
     return param_space
 
 def create_param_file(output_dir, unique_name, param):
+    """
+    Create the parameter json file from a single choice of param
+    :param output_dir:
+    :param unique_name:
+    :param param: {var: val, var: val}
+    :return:
+    """
     directory = os.path.join(output_dir, unique_name)
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -49,6 +56,17 @@ def create_param_file(output_dir, unique_name, param):
     return param_file
 
 def submit(job_name, commands, work_dir, save_path, program, pbs, param_file):
+    """
+    Submit job to PBS system
+    :param job_name: Task_name + id
+    :param commands: Prerequisites before calling
+    :param work_dir: path to the subprocess program file
+    :param save_path: output file path, usually same as work_dir/task_name/unique_name
+    :param program: command for the subprocess, e.g. "python run.py". Accepts parameters: params.json, output_path
+    :param pbs: dict of PBS related params
+    :param param_file: path to the param json
+    :return:
+    """
     queue_name = pbs["queue_name"]
     wall_time = pbs["wall_time"]
     command = """qsub - << EOJ
