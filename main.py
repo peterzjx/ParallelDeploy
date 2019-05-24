@@ -4,6 +4,7 @@ import itertools
 import json
 import os
 import re
+import sys
 
 def timestamp():
     return datetime.datetime.now().strftime("%Y%m%d%H%M%S")
@@ -117,4 +118,4 @@ def main(config_path):
 
 if __name__ == "__main__":
     # call("run.py", '{"var1":20, "var2":3}')
-    main(config_path="experiment.json")
+    main(config_path=sys.argv[1])
